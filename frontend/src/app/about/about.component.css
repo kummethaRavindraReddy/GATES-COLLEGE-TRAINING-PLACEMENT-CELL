@@ -1,0 +1,25 @@
+.follow a
+{
+    padding: 10px;
+    color: blue;
+    font-weight: bold;
+}
+img{
+    max-width: 42%;
+    height: 80%;
+    float: left;
+}
+p{
+    width: 55%;
+    float: right;
+}
+h2 {
+    text-align: center;
+}
+@media screen and (max-width:600px)
+{
+    .follow a
+    {
+        padding: 5px;
+    }
+}
