@@ -1,0 +1,92 @@
+<div class="topnav" id="myTopnav">
+
+    <a href="create-student">Students Registration</a>
+
+    <a href="company">Company</a>
+
+    <!--<a href="students">Student Registration List</a>-->
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>&nbsp;
+
+<div class="col-md-4 offset-md-4 bg-success">
+    <h3> Create Student Registrations </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> Student Roll No</label>                               
+            <input type="text" class ="form-control" placeholder="Enter Your rollNo" id = "rollNo"
+                [(ngModel)] = "student.rollNo" name = "rollNo">
+        </div>
+        <div class="form-group">
+            <label> Student First Name</label>                               
+            <input type="text" class ="form-control" placeholder="Enter Your firstName" id = "firstName"
+                [(ngModel)] = "student.firstName" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Student Last Name</label>
+            <input type="text" class ="form-control" placeholder="Enter Your lastName" id = "lastName"
+                [(ngModel)] = "student.lastName" name = "lastName">
+        </div>
+    
+        <div class="form-group">
+            <label for="emailId" class="control-label"> Email Id</label>
+            <input  id = "emailId" name="emailId"  (input)="validateemailId()" placeholder="Enter Your Email Id" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+             #emailId="ngModel" [(ngModel)] = "student.emailId"  type="email" class ="form-control" >
+               <span  *ngIf=errors.emailId>
+                    Email Id required</span>
+        </div>
+    
+        <button class = "btn btn-info" type ="submit">Submit</button>
+    
+        <p>{{ registrationDate | date}}</p> <!--custom pipe-->
+    
+    </form>
+    </div> 
+    <!--Footer Starts HERE-->
+        <footer class="footer">
+            <div class="wrapper">
+                <p>&copy; <a>GATES INSTITUTE OF COLLEGE,GOOTY</a></p>
+            </div>
+        </footer>
+        <!--Footer Ends HERE-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<nav class="navbar navbar-expand-lg  navbar-light">
+  <a class="navbar-brand" routerLink=""></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse primary" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+      
+          <li class = "nav-item">
+            <a routerLink="create-student" routerLinkActive="active" class="nav-link">Add Students</a>
+          </li>
+              
+        </ul>
+      </div>
+</nav>-->

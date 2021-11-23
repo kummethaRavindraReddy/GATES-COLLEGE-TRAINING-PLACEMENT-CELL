@@ -1,0 +1,33 @@
+<div class="topnav" id="myTopnav">
+    <a href="addcompany">Add New Company</a>
+    <a href="applynow-list">Applied List</a>
+    <a href="students">Student Registration List</a>
+    <a href="addcompanydetails">Added Company List</a>
+    <div class="topnav-right">
+      <a href="home">Log Out</a>
+    </div>
+</div>
+<br><h2>Companies Info</h2><br>
+<!--<button (click) = "back()" class = "btn btn-secondary" style="margin-left: 1380px"> Back</button>&nbsp;  -->
+<!--<br><br>-->
+<div class="row">
+    <div *ngFor="let addcompany of addcompanys" class="col-md-6 col-xl-3">
+       <div class="card m-b-30">
+         <div class="card-body row">
+            <div class="card-img-top">
+                <a href=""><img src= {{addcompany?.image}}  alt=""   class="img-fluid rounded-rectangle w-10"  style="margin:5px; max-height:200px; max-width:200px;"></a>
+            </div>
+
+         </div>
+         <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Company Name: {{addcompany?.companyName}}</li>
+            <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Description: {{addcompany?.description}}</li>
+             <br>
+             <button (click) = "updateAddcompany(addcompany.id)" class = "btn btn-info"> View</button>&nbsp;
+                <button (click) = "deleteAddcompany(addcompany.id)" class = "btn btn-success"> Delete</button>
+         </ul>
+
+         </div>
+      </div>
+</div>

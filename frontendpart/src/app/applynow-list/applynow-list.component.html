@@ -1,0 +1,46 @@
+<div class="topnav" id="myTopnav">
+
+    <a href="addcompany">Add New Company</a>
+    <a href="applynow-list">Applied List</a>
+
+    <a href="students">Student Registration List</a>
+    <a href="addcompany-list">Added Company List</a>
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>
+
+
+<!--<br><h2>Applied info</h2><br>-->
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Company Name</th>
+            <th> Full Name </th>
+            <th> Roll No </th>
+            <th> Phone Number</th>
+            <th>Address</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let applynow of applynows">
+            <td> {{ applynow.companyName }} </td>
+            <td> {{ applynow.fullName }} </td>
+            <td> {{ applynow.rollNo }} </td>
+            <td> {{ applynow.phoneNumber }} </td>
+            <td> {{ applynow.address}} </td>
+            <td>
+                <!--<button (click) = "updateApplynow(applynow.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>-->
+                <button (click) = "deleteApplynow(applynow.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "updateApplynow(applynow.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+
+            </td>
+        </tr>
+    </tbody>
+    <!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+</table>

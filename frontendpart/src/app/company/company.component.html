@@ -1,0 +1,92 @@
+<div class="topnav" id="myTopnav">
+
+    <a href="create-student">Students Registration</a>
+
+    <a href="company">Company</a>
+
+   <!--<a href="students">Student Registration List</a>-->
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>
+
+
+<br><h2>All Companies</h2><br>
+<!--<br><br>
+<button (click) = "logout()" class = "btn btn-danger" style="margin-left: 1200px"> Logout</button>&nbsp; 
+<br><br>-->
+<!--<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>-->
+<div class="row">
+    <div *ngFor="let addcompany of addcompany" class="col-md-6 col-xl-3">
+       <div class="card m-b-30">
+          <div class="card-body row">
+             <div class="card-img-top">
+                <a href=""><img src= {{addcompany.image}}  alt=""   class="img-fluid rounded-rectangle w-10"  style="margin:5px; max-height:200px; max-width:200px;"></a>
+    
+            </div>
+
+          </div>
+          <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Company Name: {{addcompany.companyName}}</li>
+            <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Description: {{addcompany.description}}</li>
+          </ul>
+          <a class="btn btn-success btn-sm mt-2" (click)="onapplynow(addcompany.companyName)">Apply Now</a>
+
+          </div>
+          </div>
+          </div>
+
+<!--
+<section class="company">
+    <div class="container">
+        <h1 class="text-center">All Companies</h1>
+    
+        <div class="row mt-5" >
+            <div class="col-lg-4 mb-5" *ngFor="let cs of company">
+                <div class="box shadow-sm">
+                    <img src="{{cs.image}}" width="100%">
+                    <h4 class="mt-2">{{cs.name}}</h4>
+                    <p clas="mt-3">{{cs.description}}</p>
+                  
+                    <!<button class="btn btn-danger btn-sm mt-2" type ="submit" href='learnmore'>Learn More</button> -->
+                    <!-- <a class="btn btn-danger btn-sm mt-2" type ="submit" href='buynow'>Buy Now</a> 
+                    <a class="btn btn-danger btn-sm mt-2" (click)="onapplynow(cs.name)">Apply Now</a>
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
+    </section>-->
+
+
+
+
+
+
+
+    <section>
+     <h1 class="text-center">Upcoming Companies</h1>
+		<div class="main-container">
+			<ul class="grid-wrapper">
+				<li>TCS</li>
+				<li>ACCENTURE</li>
+				<li>WINFO</li>
+				<li>INFOSYS</li>
+				<li>IBM</li>
+				<li>PALANI</li>
+				<li>HEXAWARE TECHNOLOGIES</li>
+				<li>HCL</li>
+			</ul>
+		</div>
+	</section>

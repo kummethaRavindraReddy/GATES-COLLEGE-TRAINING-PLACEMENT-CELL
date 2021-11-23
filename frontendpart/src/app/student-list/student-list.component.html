@@ -1,0 +1,91 @@
+<!--<nav class="navbar navbar-expand-lg  navbar-light">
+  <a class="navbar-brand" routerLink=""></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse primary" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+     <li class = "nav-item">
+            <a routerLink="students" routerLinkActive="active" class="nav-link" >View Registered Students</a>
+        </li>
+          
+          
+        </ul>
+      </div>
+</nav>-->
+
+<!--<div class="topnav" id="myTopnav">
+
+    <a href="create-student">Students Registration</a>
+
+    <a href="company">Company</a>
+
+    <a href="students">Student Registration List</a>
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>-->
+
+
+
+<div class="topnav" id="myTopnav">
+
+    <a href="addcompany">Add New Company</a>
+    <a href="applynow-list">Applied List</a>
+
+    <a href="students">Student Registration List</a>
+    <a href="addcompany-list">Added Company List</a>
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2> Registered Student List </h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Student Roll No</th>
+            <th> Student First Name</th>
+            <th> Student Last Name </th>
+            <th> Student Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students" >
+            <td> {{ student.rollNo }} </td>
+            <td> {{ student.firstName }} </td>
+            <td> {{ student.lastName }} </td>
+            <td> {{ student.emailId }} </td>
+            <td>
+                <!--<button (click) = "updateStudent(student.id)" class = "btn btn-info"> Update</button>-->
+                <button (click) = "deleteStudent(student.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "updateStudent(student.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

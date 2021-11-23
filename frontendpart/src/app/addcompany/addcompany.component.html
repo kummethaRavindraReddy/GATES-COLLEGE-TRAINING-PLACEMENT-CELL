@@ -1,0 +1,45 @@
+<div class="topnav" id="myTopnav">
+
+    <a href="addcompany">Add New Company</a>
+    <a href="applynow-list">Applied List</a>
+
+    <a href="students">Student Registration List</a>
+    <a href="addcompany-list">Added Company List</a>
+
+    <div class="topnav-right">
+
+      <a href="home">Log Out</a>
+
+    </div>
+
+  </div>
+
+<br><div class="col-md-4 offset-md-4 bg-info">
+    <br><h3> Add new Company</h3>
+    <form (ngSubmit) = "onSubmit()">
+    <br>
+        <div class="form-group">
+            <label> Company Name</label>
+            <input type="text" class ="form-control" id = "companyName"
+                [(ngModel)] = "addcompany.companyName" name = "companyName">
+        </div>
+    
+        <div class="form-group">
+            <label>Image</label>
+            <input type="text" class ="form-control" id = "image"
+                [(ngModel)] = "addcompany.image" name = "image">
+        </div>
+
+        <div class="form-group">
+            <label >Description</label>
+            <textarea name = "description" class ="form-control" 
+            [(ngModel)] = "addcompany.description">
+             </textarea>
+        </div>
+        
+    
+        <button class = "btn btn-danger" type ="submit">Add Company</button>&nbsp;
+    &nbsp;
+    <!--<button (click) = "back()" class = "btn btn-dark" > Back</button>&nbsp;-->
+    </form>
+    </div> 
